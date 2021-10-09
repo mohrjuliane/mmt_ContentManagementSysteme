@@ -1,0 +1,47 @@
+@import "reset";
+@import "base";
+@import "variables";
+@import "font-styles";
+
+#hero {
+  background-image: url("../images/illuminated-keyboard-1242287.jpg");
+  height: 500px;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 55em;
+    a {
+      font-size: 20px;
+    }
+  }
+}
+
+#Services {
+  ul {
+    display: flex;
+    flex-direction: row;
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 300px;
+      width: 300px;
+    }
+  }
+}
+
+footer {
+  background-color: $primary-color;
+}
