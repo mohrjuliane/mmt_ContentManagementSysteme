@@ -1,11 +1,38 @@
 @import "variables";
 
+@font-face {
+  font-family: slabo;
+  src: url("../fonts/Slabo27px-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-size: 13pt;
+}
+
 h1 {
   color: $primary-color;
-  font-size: 45px;
+  font-size: 33pt;
+}
+
+main {
+  h2 {
+    margin-bottom: 20px;
+  }
 }
 
 h2 {
   color: $primary-color;
-  font-size: 35px;
+  font-size: 20pt;
+}
+
+h3 {
+  color: $primary-color;
+  font-size: 13pt;
+}
+
+h4 {
+  color: $primary-color;
+  font-size: 12pt;
 }
