@@ -11,7 +11,7 @@
       document.documentElement.classList.add("js");
     </script>
 
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./sass/styles.css" />
 
     <meta
       name="description"
@@ -41,7 +41,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="max-width-container">
         <h1 id="logo">Alex Mayer</h1>
         <ul>
           <li><a href="#">Start</a></li>
@@ -57,30 +57,30 @@
       </section>
     </header>
     <main>
-      <section id="Services">
+      <section id="Services" class="max-width-container">
         <h2>Leistungen</h2>
         <ul>
           <li>
-            <a href="#">
+            <a href="#" id="design">
               <h3>Design</h3>
-              <img src="../images/design.png" alt="design" />
+              <img src="./images/design.png" alt="design" />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" id="strategy">
               <h3>Strategie</h3>
-              <img src="../images/strategy.png" alt="strategy" />
+              <img src="./images/strategy.png" alt="strategy" />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" id="consulting">
               <h3>Consulting</h3>
-              <img src="../images/consulting.png" alt="consulting" />
+              <img src="./images/consulting.png" alt="consulting" />
             </a>
           </li>
         </ul>
       </section>
-      <section id="News">
+      <section id="News" class="max-width-container">
         <h2>News</h2>
         <ul>
           <li>
@@ -97,10 +97,10 @@
           </li>
         </ul>
       </section>
-      <section id="References">
+      <section id="References" class="max-width-container">
         <h2>Referenzen</h2>
         <article>
-          <img src="../images/dina-meyer.jpg" alt="Tina Ubuntu" />
+          <img src="./images/dina-meyer.jpg" alt="Tina Ubuntu" />
           <cite>Tina Ubuntu</cite>
           <p>CEO headless Ltd.</p>
           <blockquote>
@@ -109,16 +109,16 @@
           </blockquote>
         </article>
         <article>
-          <img src="../images/thomas-meyer.jpg" alt="Tom Herzog" />
+          <img src="./images/thomas-meyer.jpg" alt="Tom Herzog" />
           <cite>Tom Herzog</cite>
           <p>Cutter's Finest</p>
           <blockquote>Große Webkunst - keine Kunst mit Alex Mayer!</blockquote>
         </article>
         <div>
-          <img src="../images/quotation_mark.svg" alt="quote icon" />
+          <img src="./images/quotation_mark.svg" alt="quote icon" />
         </div>
         <article>
-          <img src="../images/vorstand.jpg" alt="Vorstand Müller AG" />
+          <img src="./images/vorstand.jpg" alt="Vorstand Müller AG" />
           <cite>Vorstand Müller AG</cite>
           <p>KR Ernst Anker, Dr. Florian Eisner</p>
           <blockquote>
@@ -129,66 +129,69 @@
       </section>
     </main>
     <footer>
-      <p>&copy; Alex Mayer 2020</p>
-      <nav>
+      <div class="max-width-container">
+        <nav>
+          <p>&copy; Alex Mayer 2020</p>
+          <ul>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutzerklärung</a></li>
+          </ul>
+        </nav>
+        <p>
+          Demo-Wordpress-Seite im Rahmen der LV ‚Content Mangagement Systeme‘ an
+          der FH Salzburg von Vorname Nachname und Vorname Nachname
+        </p>
+        <p>Alle Inhalte frei erfunden</p>
+        <p>Bildnachweis</p>
+        <h3>Fotos</h3>
         <ul>
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Datenschutzerklärung</a></li>
+          <li>
+            <p>
+              Herofoto Tastatur: Aman Anderson,
+              <a href="#"
+                >http://de.freeimages.com/photo/illuminated-keyboard-124228</a
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              Foto Dina Meyer by Dreifachaxel [CC BY-SA 4.0
+              <a href="#">(https://creativecommons.org/licenses/by-sa/4.0)</a>],
+              from Wikimedia Commons
+            </p>
+          </li>
+          <li>
+            <p>
+              Foto Thomas Meyer-Hermann By Thomas Meyer-Hermann (Thomas
+              Meyer-Hermann) [GFDL
+              <a href="#">(http://www.gnu.org/copyleft/fdl.html)</a>, CC BY-SA
+              3.0
+              <a href="#">(https://creativecommons.org/licenses/by-sa/3.0)</a>
+              or CC BY-SA 3.0 de
+              <a href="#"
+                >(https://creativecommons.org/licenses/by-sa/3.0/de/deed.en)]</a
+              >, via Wikimedia Commons
+              <a href="#"
+                >https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Thomas_Meyer-Hermann_1.jpg/407px-Thomas_Meyer-Hermann_1.jpg</a
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              Foto Vorstand Sparkasse Ülzen [[File:SKUelzen Vorstand
+              2015.jpg|SKUelzen Vorstand 2015]]
+              <a href="#"
+                >https://upload.wikimedia.org/wikipedia/commons/3/3e/SKUelzen_Vorstand_2015.jpg</a
+              >
+            </p>
+          </li>
         </ul>
-      </nav>
-      <p>
-        Demo-Wordpress-Seite im Rahmen der LV ‚Content Mangagement Systeme‘ an
-        der FH Salzburg von Vorname Nachname und Vorname Nachname
-      </p>
-      <p>Alle Inhalte frei erfunden</p>
-      <p>Bildnachweis</p>
-      <h3>Fotos</h3>
-      <ul>
-        <li>
-          <p>
-            Herofoto Tastatur: Aman Anderson,
-            <a href="#"
-              >http://de.freeimages.com/photo/illuminated-keyboard-124228</a
-            >
-          </p>
-        </li>
-        <li>
-          <p>
-            Foto Dina Meyer by Dreifachaxel [CC BY-SA 4.0
-            <a href="#">(https://creativecommons.org/licenses/by-sa/4.0)</a>],
-            from Wikimedia Commons
-          </p>
-        </li>
-        <li>
-          <p>
-            Foto Thomas Meyer-Hermann By Thomas Meyer-Hermann (Thomas
-            Meyer-Hermann) [GFDL
-            <a href="#">(http://www.gnu.org/copyleft/fdl.html)</a>, CC BY-SA 3.0
-            <a href="#">(https://creativecommons.org/licenses/by-sa/3.0)</a> or
-            CC BY-SA 3.0 de
-            <a href="#"
-              >(https://creativecommons.org/licenses/by-sa/3.0/de/deed.en)]</a
-            >, via Wikimedia Commons
-            <a href="#"
-              >https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Thomas_Meyer-Hermann_1.jpg/407px-Thomas_Meyer-Hermann_1.jpg</a
-            >
-          </p>
-        </li>
-        <li>
-          <p>
-            Foto Vorstand Sparkasse Ülzen [[File:SKUelzen Vorstand
-            2015.jpg|SKUelzen Vorstand 2015]]
-            <a href="#"
-              >https://upload.wikimedia.org/wikipedia/commons/3/3e/SKUelzen_Vorstand_2015.jpg</a
-            >
-          </p>
-        </li>
-      </ul>
-      <h3>Icons</h3>
-      <p>
-        Freepik <a href="#">(http://www.freepik.com)</a> /
-        <a href="#">www.flaticon.com</a>
-      </p>
+        <h3>Icons</h3>
+        <p>
+          Freepik <a href="#">(http://www.freepik.com)</a> /
+          <a href="#">www.flaticon.com</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
