@@ -147,6 +147,13 @@ html {
 .max-width-container {
   max-width: 80rem;
   margin: 0 auto;
+}
+
+main {
+  padding: 10px;
+}
+
+footer {
   padding: 10px;
 }
 
@@ -184,17 +191,18 @@ h4 {
   font-size: 12pt;
 }
 
-#hero {
-  background-image: url("../images/illuminated-keyboard-1242287.jpg");
-  height: 500px;
-  background-size: cover;
-}
-
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 5px;
 }
 
 header ul {
@@ -206,15 +214,95 @@ header ul {
 header ul a {
   font-size: 20px;
 }
-
-#hero {
-  padding: 20px;
+header ul a:hover {
+  border-bottom-color: #009ee3;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
 }
-#hero h1 {
+
+#current a {
+  color: #009ee3;
+}
+
+#hamburger-menu {
+  display: none;
+}
+#hamburger-menu span ::after {
+  background-color: #009ee3;
+}
+#hamburger-menu span ::before {
+  background-color: #009ee3;
+}
+#hamburger-menu .hamburger-inner {
+  background-color: #009ee3;
+}
+
+@media (max-width: 800px) {
+  #hamburger-menu {
+    display: block;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+  header nav {
+    display: block;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #navbar.is-active {
+    position: absolute;
+    display: block;
+    background-color: white;
+    width: 100em;
+    border-style: solid;
+    border-bottom-color: #d6d6d6;
+    border-bottom-width: 2px;
+    border-top-color: #d6d6d6;
+    border-top-width: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #navbar.is-active :hover {
+    background-color: #009ee3;
+    cursor: pointer;
+  }
+  #navbar.is-active :hover a {
+    color: white;
+  }
+  #navbar.is-active li {
+    padding-left: 20px;
+    line-height: 60px;
+    border-style: solid;
+    border-bottom-color: #d6d6d6;
+    border-bottom-width: 2px;
+  }
+}
+#hero {
+  background-image: url("../images/illuminated-keyboard-1242287.jpg");
+  height: 500px;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+#hero .title-container {
+  width: 60%;
+}
+#hero h1 span {
   padding: 5px;
-  background-color: white;
-  max-width: 300px;
   box-decoration-break: clone;
+  background-color: white;
+  line-height: 70px;
 }
 #hero button {
   display: flex;
@@ -222,6 +310,7 @@ header ul a {
   padding: 10px;
   background-color: #45b348;
   border-radius: 5px;
+  margin-top: 10px;
 }
 #hero button h2 {
   color: white;
