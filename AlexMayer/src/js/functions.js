@@ -2,7 +2,7 @@ function navSlide() {
   const burger = document.querySelector(".hamburger hamburger--collapse");
   //const nav = document.querySelector(".leiste");
 
-  //toggle Nav
+  //toggle Nav-Bar
   burger.addEventListener("click", function () {
     nav.classList.toggle("is-active");
     console.log("clicked");
