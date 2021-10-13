@@ -83,7 +83,11 @@
     li {
       margin-left: 10px;
       a {
-        line-height: 22px;
+        color: $primary-color;
+        line-height: 1.5;
+        &:hover {
+          border-bottom: 2px solid $primary-color;
+        }
       }
     }
   }

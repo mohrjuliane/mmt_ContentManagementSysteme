@@ -365,7 +365,11 @@ header ul a:hover {
   margin-left: 10px;
 }
 #News ul li a {
-  line-height: 22px;
+  color: #009ee3;
+  line-height: 1.5;
+}
+#News ul li a:hover {
+  border-bottom: 2px solid #009ee3;
 }
 
 .grid-container {
