@@ -1,0 +1,110 @@
+@import "variables";
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+header {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 30em;
+    a {
+      font-size: 20px;
+    }
+    a:hover {
+      border-bottom-color: $primary-color;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+  }
+}
+
+#current {
+  a {
+    color: $primary-color;
+    border-bottom-color: $primary-color;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+}
+
+#hamburger-menu {
+  display: none;
+  span {
+    ::after {
+      background-color: $primary-color;
+    }
+    ::before {
+      background-color: $primary-color;
+    }
+  }
+  .hamburger-inner {
+    background-color: $primary-color;
+  }
+}
+
+@include MobileDevices {
+  #hamburger-menu {
+    display: block;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+  header {
+    nav {
+      display: block;
+    }
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #navbar.is-active {
+    position: absolute;
+    display: block;
+    background-color: white;
+    width: 100em;
+    border-style: solid;
+    border-bottom-color: $theme-grey;
+    border-bottom-width: 2px;
+    border-top-color: $theme-grey;
+    border-top-width: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    :hover {
+      background-color: $primary-color;
+      cursor: pointer;
+      a {
+        color: white;
+      }
+    }
+
+    li {
+      padding-left: 20px;
+      line-height: 60px;
+      border-style: solid;
+      border-bottom-color: $theme-grey;
+      border-bottom-width: 2px;
+    }
+  }
+}

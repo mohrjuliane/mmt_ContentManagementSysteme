@@ -41,33 +41,38 @@
       href="../node_modules/hamburgers/dist/hamburgers.css"
       rel="stylesheet"
     />
-    <script
-      language="javascript"
-      type="text/javascript"
-      src="./js/functions.js"
-    ></script>
     <meta name="theme-color" content="#009ee3" />
   </head>
   <body>
     <header>
       <nav class="max-width-container">
-        <h1 id="logo">Alex Mayer</h1>
-        <ul>
-          <li><a href="#">Start</a></li>
-          <li><a href="#">Leistungen</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Über mich</a></li>
-          <li><a href="#">Kontakt</a></li>
+        <div class="nav-container">
+          <h1 id="logo">Alex Mayer</h1>
+          <button
+            class="hamburger hamburger--collapse"
+            type="button"
+            id="hamburger-menu"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+        <ul id="navbar">
+          <li class="page" id="current"><a href="#">Start</a></li>
+          <li class="page"><a href="#">Leistungen</a></li>
+          <li class="page"><a href="#">Blog</a></li>
+          <li class="page"><a href="#">Über mich</a></li>
+          <li class="page"><a href="#">Kontakt</a></li>
         </ul>
-        <button class="hamburger hamburger--collapse" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
       </nav>
       <section id="hero">
-        <h1>Glänzende Ideen <br />für leuchtende <br />Augen</h1>
-        <button><h2>Angebot einholen</h2></button>
+        <div class="title-container">
+          <h1>
+            <span>Glänzende Ideen für leuchtende Augen</span>
+          </h1>
+          <button><h2>Angebot einholen</h2></button>
+        </div>
       </section>
     </header>
     <main>
@@ -207,5 +212,10 @@
         </p>
       </div>
     </footer>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./js/functions.js"
+    ></script>
   </body>
 </html>
