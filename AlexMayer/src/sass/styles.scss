@@ -40,7 +40,7 @@
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     li {
@@ -228,4 +228,45 @@
 
 footer {
   background-color: $primary-color;
+  color: white;
+
+  & a {
+    color: white;
+
+    &:visited {
+      color: white;
+    }
+  }
+
+  & p {
+    margin-bottom: 20px;
+    &:nth-child(2) {
+      margin-right: 50%;
+    }
+  }
+
+  & h3 {
+    color: white;
+  }
+
+  & ul {
+    list-style: initial;
+    margin-left: 30px;
+    font-size: 0.8em;
+    line-height: 1.2;
+    & li {
+      &:last-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  & nav {
+    align-items: baseline;
+    & ul {
+      list-style: none;
+      font-size: 1em;
+      line-height: 1;
+    }
+  }
 }
