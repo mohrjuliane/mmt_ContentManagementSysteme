@@ -2,39 +2,26 @@
 @import "base";
 @import "variables";
 @import "font-styles";
+@import "nav";
 
 #hero {
   background-image: url("../images/illuminated-keyboard-1242287.jpg");
   height: 500px;
   background-size: cover;
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header {
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    min-width: 30em;
-    a {
-      font-size: 20px;
-    }
-  }
-}
-
-#hero {
   padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  .title-container {
+    width: 60%;
+  }
   h1 {
-    padding: 5px;
-    background-color: white;
-    max-width: 300px;
-    box-decoration-break: clone;
+    span {
+      padding: 5px;
+      box-decoration-break: clone;
+      background-color: white;
+      line-height: 70px;
+    }
   }
   button {
     display: flex;
@@ -42,6 +29,7 @@ header {
     padding: 10px;
     background-color: #45b348;
     border-radius: 5px;
+    margin-top: 10px;
     h2 {
       color: white;
     }
