@@ -270,10 +270,14 @@ header ul a:hover {
     display: none;
   }
 
+  #current a {
+    border: none;
+  }
+
   #navbar.is-active {
     position: absolute;
     display: block;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.98);
     width: 100vw;
     left: 0;
     border-style: solid;
@@ -541,12 +545,25 @@ footer nav ul {
     margin: 0 15px;
   }
 
+  #hero {
+    height: 300px;
+  }
   #hero .title-container {
     width: 100%;
     padding-right: 0;
   }
   #hero .title-container h1 {
     padding-right: 0;
+  }
+
+  #Services #design {
+    width: 100%;
+  }
+  #Services #strategy {
+    width: 100%;
+  }
+  #Services #consulting {
+    width: 100%;
   }
 
   .grid-container {
@@ -616,8 +633,16 @@ footer nav ul {
     height: 100%;
     padding: 0;
   }
-  .grid-container footer li {
-    display: inline-block;
+
+  footer nav {
+    flex-wrap: wrap;
+  }
+  footer nav p {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  footer nav ul {
+    margin-left: 0;
   }
 }
 
