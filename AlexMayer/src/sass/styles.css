@@ -392,11 +392,13 @@ header ul a:hover {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 125px 100px;
   margin-bottom: 2em;
 }
 .grid-container img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -467,12 +469,13 @@ header ul a:hover {
 }
 .grid-container #quote img {
   grid-area: quote-img;
+  height: auto;
 }
 .grid-container #director {
   display: grid;
   grid-column: 5/9;
   grid-row: 1/5;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 125px 100px;
   grid-template-columns: repeat(4, 1fr);
   background-color: #d8edd6;
   grid-template-areas: ". director-img director-img director-img" ". director-img director-img director-img" "director-caption director-caption director-caption director-caption" "director-quote director-quote director-quote director-quote";
