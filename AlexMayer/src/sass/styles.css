@@ -200,7 +200,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
 .nav-container {
@@ -210,6 +210,10 @@ nav {
   padding-bottom: 5px;
 }
 
+header #navbar {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
 header ul {
   display: flex;
   flex-direction: row;
@@ -217,7 +221,7 @@ header ul {
   min-width: 30em;
 }
 header ul a {
-  font-size: 20px;
+  font-size: 18px;
 }
 header ul a:hover {
   border-bottom-color: #009ee3;
