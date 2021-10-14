@@ -14,25 +14,30 @@
 
   .title-container {
     width: 60%;
+    align-self: center;
+    padding-right: 50px;
   }
   h1 {
+    padding-right: 20%;
     span {
-      padding: 5px;
+      display: inline;
+      padding: 0px 10px;
       box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
       background-color: white;
-      line-height: 70px;
+      line-height: 60px;
     }
   }
   button {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 15px;
     background-color: #45b348;
     border-radius: 5px;
     margin-top: 10px;
-    h2 {
-      color: white;
-    }
+    color: white;
+    font-size: 18pt;
+    font-family: "Slabo 13px";
   }
 }
 
@@ -276,6 +281,16 @@ footer {
 @include MobileDevices {
   .max-width-container {
     margin: 0 15px;
+  }
+
+  #hero {
+    .title-container {
+      width: 100%;
+      padding-right: 0;
+      h1 {
+        padding-right: 0;
+      }
+    }
   }
 
   .grid-container {

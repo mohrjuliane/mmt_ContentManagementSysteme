@@ -82,7 +82,8 @@ header {
     position: absolute;
     display: block;
     background-color: white;
-    width: 100em;
+    width: 100vw;
+    left: 0;
     border-style: solid;
     border-bottom-color: $theme-grey;
     border-bottom-width: 2px;
