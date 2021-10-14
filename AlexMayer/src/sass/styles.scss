@@ -106,6 +106,20 @@
 
   img {
     width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .caption {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  blockquote {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 22px;
+    line-height: 1.2;
   }
 
   #tina {
@@ -121,24 +135,16 @@
       "tina-quote tina-quote tina-quote";
 
     img {
-      box-sizing: border-box;
-      padding: 10px;
       grid-area: tina-img;
     }
 
     .caption {
       grid-area: tina-caption;
-      box-sizing: border-box;
-      padding: 10px;
       z-index: 1;
       background-color: $theme-yellow;
     }
 
     blockquote {
-      box-sizing: border-box;
-      padding: 10px;
-      font-size: 22px;
-      line-height: 1.2;
       grid-area: tina-quote;
       z-index: 1;
       background-color: $theme-yellow;
@@ -158,26 +164,19 @@
       ". . .";
 
     img {
-      box-sizing: border-box;
       grid-area: tom-img;
-      padding: 10px;
     }
 
     .caption {
-      box-sizing: border-box;
       grid-area: tom-caption;
       justify-self: end;
       text-align: right;
-      padding: 10px;
     }
 
     blockquote {
-      font-size: 22px;
-      line-height: 1.2;
       align-self: center;
       justify-self: end;
       text-align: right;
-      padding: 10px;
       grid-area: tom-quote;
     }
   }
@@ -215,23 +214,16 @@
     text-align: right;
 
     img {
-      box-sizing: border-box;
-      padding: 10px 10px 0px 10px;
+      padding-bottom: 0px;
       grid-area: director-img;
     }
 
     .caption {
       grid-area: director-caption;
-      box-sizing: border-box;
-      padding: 10px;
     }
 
     blockquote {
-      font-size: 22px;
-      line-height: 1.2;
       grid-area: director-quote;
-      box-sizing: border-box;
-      padding: 10px;
     }
   }
 }
@@ -277,6 +269,106 @@ footer {
       list-style: none;
       font-size: 1em;
       line-height: 1;
+    }
+  }
+}
+
+@include MobileDevices {
+  .max-width-container {
+    margin: 0 15px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+
+    img {
+      height: 400px;
+      object-fit: cover;
+      padding: 20px;
+    }
+
+    .caption {
+      padding: 0 20px;
+    }
+
+    blockquote {
+      padding: 10px 20px 20px 20px;
+    }
+
+    #tina {
+      grid-column: 1;
+      grid-row: 1 / 4;
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "tina-img"
+        "tina-caption"
+        "tina-quote";
+    }
+
+    #tom {
+      grid-column: 1;
+      grid-row: 4 / 7;
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "tom-img"
+        "tom-caption"
+        "tom-quote";
+
+      .caption {
+        justify-self: start;
+        text-align: left;
+      }
+
+      blockquote {
+        justify-self: start;
+        text-align: left;
+      }
+    }
+
+    #director {
+      grid-column: 1;
+      grid-row: 7 / 10;
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "director-img"
+        "director-caption"
+        "director-quote";
+
+      img {
+        padding-bottom: 20px;
+      }
+
+      .caption {
+        justify-self: start;
+        text-align: left;
+      }
+
+      blockquote {
+        justify-self: start;
+        text-align: left;
+      }
+    }
+
+    #quote {
+      grid-column: 1;
+      grid-row: 10 / 11;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "quote-img .";
+      img {
+        width: 50vw;
+        height: 100%;
+        padding: 0;
+      }
+    }
+    footer {
+      li {
+        display: inline-block;
+      }
     }
   }
 }

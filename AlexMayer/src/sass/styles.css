@@ -384,6 +384,18 @@ header ul a:hover {
 }
 .grid-container img {
   width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.grid-container .caption {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.grid-container blockquote {
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 22px;
+  line-height: 1.2;
 }
 .grid-container #tina {
   display: grid;
@@ -395,22 +407,14 @@ header ul a:hover {
   grid-template-areas: "tina-img . ." "tina-caption tina-caption ." "tina-quote tina-quote tina-quote";
 }
 .grid-container #tina img {
-  box-sizing: border-box;
-  padding: 10px;
   grid-area: tina-img;
 }
 .grid-container #tina .caption {
   grid-area: tina-caption;
-  box-sizing: border-box;
-  padding: 10px;
   z-index: 1;
   background-color: #fffad8;
 }
 .grid-container #tina blockquote {
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 22px;
-  line-height: 1.2;
   grid-area: tina-quote;
   z-index: 1;
   background-color: #fffad8;
@@ -425,24 +429,17 @@ header ul a:hover {
   grid-template-areas: ". tom-caption tom-img" ". tom-quote tom-quote" ". . .";
 }
 .grid-container #tom img {
-  box-sizing: border-box;
   grid-area: tom-img;
-  padding: 10px;
 }
 .grid-container #tom .caption {
-  box-sizing: border-box;
   grid-area: tom-caption;
   justify-self: end;
   text-align: right;
-  padding: 10px;
 }
 .grid-container #tom blockquote {
-  font-size: 22px;
-  line-height: 1.2;
   align-self: center;
   justify-self: end;
   text-align: right;
-  padding: 10px;
   grid-area: tom-quote;
 }
 .grid-container #quote {
@@ -470,21 +467,14 @@ header ul a:hover {
   text-align: right;
 }
 .grid-container #director img {
-  box-sizing: border-box;
-  padding: 10px 10px 0px 10px;
+  padding-bottom: 0px;
   grid-area: director-img;
 }
 .grid-container #director .caption {
   grid-area: director-caption;
-  box-sizing: border-box;
-  padding: 10px;
 }
 .grid-container #director blockquote {
-  font-size: 22px;
-  line-height: 1.2;
   grid-area: director-quote;
-  box-sizing: border-box;
-  padding: 10px;
 }
 
 footer {
@@ -522,6 +512,83 @@ footer nav ul {
   list-style: none;
   font-size: 1em;
   line-height: 1;
+}
+
+@media (max-width: 800px) {
+  .max-width-container {
+    margin: 0 15px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+  }
+  .grid-container img {
+    height: 400px;
+    object-fit: cover;
+    padding: 20px;
+  }
+  .grid-container .caption {
+    padding: 0 20px;
+  }
+  .grid-container blockquote {
+    padding: 10px 20px 20px 20px;
+  }
+  .grid-container #tina {
+    grid-column: 1;
+    grid-row: 1/4;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: "tina-img" "tina-caption" "tina-quote";
+  }
+  .grid-container #tom {
+    grid-column: 1;
+    grid-row: 4/7;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: "tom-img" "tom-caption" "tom-quote";
+  }
+  .grid-container #tom .caption {
+    justify-self: start;
+    text-align: left;
+  }
+  .grid-container #tom blockquote {
+    justify-self: start;
+    text-align: left;
+  }
+  .grid-container #director {
+    grid-column: 1;
+    grid-row: 7/10;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: "director-img" "director-caption" "director-quote";
+  }
+  .grid-container #director img {
+    padding-bottom: 20px;
+  }
+  .grid-container #director .caption {
+    justify-self: start;
+    text-align: left;
+  }
+  .grid-container #director blockquote {
+    justify-self: start;
+    text-align: left;
+  }
+  .grid-container #quote {
+    grid-column: 1;
+    grid-row: 10/11;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "quote-img .";
+  }
+  .grid-container #quote img {
+    width: 50vw;
+    height: 100%;
+    padding: 0;
+  }
+  .grid-container footer li {
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
