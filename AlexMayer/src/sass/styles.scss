@@ -290,12 +290,27 @@ footer {
   }
 
   #hero {
+    height: 300px;
     .title-container {
       width: 100%;
       padding-right: 0;
       h1 {
         padding-right: 0;
       }
+    }
+  }
+
+  #Services {
+    #design {
+      width: 100%;
+    }
+
+    #strategy {
+      width: 100%;
+    }
+
+    #consulting {
+      width: 100%;
     }
   }
 
