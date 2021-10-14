@@ -221,6 +221,7 @@ header ul {
   min-width: 30em;
 }
 header ul a {
+  color: black;
   font-size: 18px;
 }
 header ul a:hover {
