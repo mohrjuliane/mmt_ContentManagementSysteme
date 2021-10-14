@@ -141,7 +141,7 @@ button {
 }
 
 html {
-  font-family: slabo;
+  font-family: "Slabo 13px";
 }
 
 .max-width-container {
@@ -157,11 +157,15 @@ footer {
   padding: 15px;
 }
 
+/* slabo-13px-regular - latin */
 @font-face {
-  font-family: slabo;
-  src: url("../fonts/Slabo27px-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Slabo 13px";
   font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/slabo-13px-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/slabo-13px-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/slabo-13px-v8-latin-regular.woff2") format("woff2"), url("../fonts/slabo-13px-v8-latin-regular.woff") format("woff"), url("../fonts/slabo-13px-v8-latin-regular.ttf") format("truetype"), url("../fonts/slabo-13px-v8-latin-regular.svg#Slabo13px") format("svg");
+  /* Legacy iOS */
 }
 p {
   font-size: 13pt;
@@ -266,7 +270,8 @@ header ul a:hover {
     position: absolute;
     display: block;
     background-color: white;
-    width: 100em;
+    width: 100vw;
+    left: 0;
     border-style: solid;
     border-bottom-color: #d6d6d6;
     border-bottom-width: 2px;
@@ -301,23 +306,30 @@ header ul a:hover {
 }
 #hero .title-container {
   width: 60%;
+  align-self: center;
+  padding-right: 50px;
+}
+#hero h1 {
+  padding-right: 20%;
 }
 #hero h1 span {
-  padding: 5px;
+  display: inline;
+  padding: 0px 10px;
   box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   background-color: white;
-  line-height: 70px;
+  line-height: 60px;
 }
 #hero button {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 15px;
   background-color: #45b348;
   border-radius: 5px;
   margin-top: 10px;
-}
-#hero button h2 {
   color: white;
+  font-size: 18pt;
+  font-family: "Slabo 13px";
 }
 
 #Services h2 {
@@ -517,6 +529,14 @@ footer nav ul {
 @media (max-width: 800px) {
   .max-width-container {
     margin: 0 15px;
+  }
+
+  #hero .title-container {
+    width: 100%;
+    padding-right: 0;
+  }
+  #hero .title-container h1 {
+    padding-right: 0;
   }
 
   .grid-container {
