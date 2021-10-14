@@ -383,7 +383,7 @@ header ul a:hover {
 }
 #News ul li a {
   color: #009ee3;
-  line-height: 1.5;
+  line-height: 2;
 }
 #News ul li a:hover {
   border-bottom: 2px solid #009ee3;
