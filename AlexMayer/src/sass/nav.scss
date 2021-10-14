@@ -82,10 +82,16 @@ header {
     display: none;
   }
 
+  #current {
+    a {
+      border: none;
+    }
+  }
+
   #navbar.is-active {
     position: absolute;
     display: block;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.98);
     width: 100vw;
     left: 0;
     border-style: solid;
