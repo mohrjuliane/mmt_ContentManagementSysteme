@@ -401,9 +401,16 @@ footer {
         padding: 0;
       }
     }
-    footer {
-      li {
-        display: inline-block;
+  }
+  footer {
+    nav {
+      flex-wrap: wrap;
+      p {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+      ul {
+        margin-left: 0;
       }
     }
   }
