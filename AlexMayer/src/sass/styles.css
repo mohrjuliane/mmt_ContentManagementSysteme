@@ -470,6 +470,7 @@ header ul a:hover {
 .grid-container #quote img {
   grid-area: quote-img;
   height: auto;
+  padding: 0;
 }
 .grid-container #director {
   display: grid;
