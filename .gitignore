@@ -7,3 +7,5 @@
 ./AlexMayer/screendesign.pdf
 
 **/node_modules
+**/dist
+**/_site
