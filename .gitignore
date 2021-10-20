@@ -9,3 +9,5 @@
 **/node_modules
 **/dist
 **/_site
+AlexMayer/dist
+AlexMayer/_site
