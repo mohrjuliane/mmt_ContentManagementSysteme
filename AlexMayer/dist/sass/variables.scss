@@ -1,0 +1,14 @@
+$primary-color: #009ee3;
+$theme-yellow: #fffad8;
+$theme-blue: #c6effc;
+$theme-green: #d8edd6;
+$theme-orange: #faddd3;
+$theme-grey: #d6d6d6;
+
+$breakpoint-mobile: 800px;
+
+@mixin MobileDevices {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
