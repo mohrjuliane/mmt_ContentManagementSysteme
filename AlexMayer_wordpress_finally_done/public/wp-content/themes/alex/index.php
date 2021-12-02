@@ -47,7 +47,8 @@
         <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
       </div>
     </nav>
-    <section id="hero">
+    <section id="hero" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+
       <div class="title-container">
         <h1>
           <span>Glänzende Ideen für leuchtende Augen</span>
