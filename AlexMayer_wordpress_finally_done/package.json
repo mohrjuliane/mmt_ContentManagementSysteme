@@ -1,0 +1,16 @@
+{
+  "name": "alex-mayer-wp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rsync -vaE --progress ./src/php/ ./public/wp-content/themes/alex --delete && sass -q ./src/sass/styles.scss ./public/wp-content/themes/alex/style.css && rsync -vaE --progress ./src/images/ ./public/wp-content/themes/alex/images --delete && rsync -vaE --progress ./src/favicon/ ./public/wp-content/themes/alex/favicon && rsync -vaE --progress ./src/fonts/ ./public/wp-content/themes/alex/fonts && esbuild ./src/js/functions.js --bundle --outfile=./public/wp-content/themes/alex/js/functions.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.13.13",
+    "hamburgers": "^1.1.3"
+  }
+}
