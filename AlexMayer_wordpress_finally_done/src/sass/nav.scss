@@ -86,6 +86,9 @@ ul {
     nav {
       display: block;
     }
+    ul {
+      flex-direction: column;
+    }
   }
 
   #navbar {
@@ -112,13 +115,6 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    :hover {
-      background-color: $primary-color;
-      cursor: pointer;
-      a {
-        color: white;
-      }
-    }
 
     li {
       padding-left: 20px;

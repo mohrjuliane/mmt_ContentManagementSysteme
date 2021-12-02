@@ -43,7 +43,9 @@
           </span>
         </button>
       </div>
-      <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+      <div id="navbar">
+        <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+      </div>
     </nav>
     <section id="hero">
       <div class="title-container">
@@ -145,10 +147,7 @@
   <footer>
     <?php wp_footer(); ?>
     <nav>
-      <p>&copy; Alex Mayer 2020</p>
-      <ul>
-        <li><a href="#">Impressum</a> | <a href="#">Datenschutzerklärung</a></li>
-      </ul>
+      <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
     </nav>
     <p>
       Demo-Wordpress-Seite im Rahmen der LV ‚Content Mangagement Systeme‘ an

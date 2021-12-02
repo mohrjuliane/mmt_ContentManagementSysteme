@@ -1117,6 +1117,9 @@ ul .current-menu-item a {
   header nav {
     display: block;
   }
+  header ul {
+    flex-direction: column;
+  }
 
   #navbar {
     display: none;
@@ -1140,13 +1143,6 @@ ul .current-menu-item a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  #navbar.is-active :hover {
-    background-color: #009ee3;
-    cursor: pointer;
-  }
-  #navbar.is-active :hover a {
-    color: white;
   }
   #navbar.is-active li {
     padding-left: 20px;
@@ -1388,8 +1384,11 @@ footer ul li:last-child {
 }
 footer nav {
   align-items: baseline;
+  justify-content: flex-end;
 }
 footer nav ul {
+  display: flex;
+  gap: 20px;
   list-style: none;
   font-size: 1em;
   line-height: 1;
